@@ -12,16 +12,23 @@ function FormularioDeTarefa({ onAdd }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="task-form">
-      <input
-        type="text"
-        placeholder="Adicionar nova tarefa..."
-        value={tarefa}
-        onChange={(e) => setTarefa(e.target.value)}
-      />
-      <button type="submit">Adicionar</button>
-    </form>
-  );
+ // Adiciona classes de layout e margem para o formulário
+   <form onSubmit={handleSubmit} className="mb-4 d-flex">
+ {/* Classe 'form-control' para estilizar o input */}
+   <input
+   type="text"
+   placeholder="Adicionar nova tarefa..."
+   value={tarefa}
+   onChange={(e) => setTarefa(e.target.value)}
+   className="form-control me-2" // 'me-2' para margem à direita
+   />
+ {/* Classe 'btn' e 'btn-primary' para estilizar o botão */}
+   <button type="submit" className="btn btn-primary">
+   Adicionar
+   </button>
+   </form>
+ );
+
 }
 
 export default FormularioDeTarefa;

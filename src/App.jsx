@@ -33,8 +33,8 @@ function App() {
   return (
     <Router>
       <div className="app-container">
-        <h1>Lista de Tarefas</h1>
-        <Header />
+      <h1 className='text-bg-secondary p-3'>Cadastro de Tarefas</h1>        
+      <Header />
         <FormularioDeTarefa onAdd={adicionarTarefa} />
         <Routes>
           <Route path="/" element={<TodasAsTarefas tarefas={tarefas} onToggle={alternarConclusao} onRemove={removerTarefa} />} />
